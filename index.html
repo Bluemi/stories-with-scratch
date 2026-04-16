@@ -17,6 +17,7 @@
     import {SetupScene} from "./src/setup-scene.ts";
     import {DrawingScene} from "./src/drawing-scene.ts";
     import {ScratchExplained} from "./src/scratch-explained.ts";
+    import {PaintFigure} from "./src/paint-figure.ts";
 
     const sketchHolder = document.getElementById('sketch-holder');
     if (!sketchHolder) {
@@ -31,11 +32,16 @@
               // intro / setup
               ["introScene", new IntroScene()],
               ["setupScene", new SetupScene()],
-              ["drawingScene", new DrawingScene()],
+
+              // scratch explained
               ["scratchExplained", new ScratchExplained()],
+
+              // drawing
+              ["drawingScene", new DrawingScene()],
+              ["paintFigure", new PaintFigure()],
             ],
             [],
-            ["edit.png", "intro.png", "setup.jpg", "back_button.png", "costumesBackgrounds.jpg", "deleteCat.png", "arrow.png"]
+            ["edit.png", "intro.png", "setup.jpg", "back_button.png", "costumesBackgrounds.jpg", "deleteCat.png", "arrow.png", "addFigure.png"]
     );
   </script>
 </body>

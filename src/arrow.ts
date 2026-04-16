@@ -6,7 +6,7 @@ export class Arrow extends InteractiveElement {
 
     constructor(identifier: string, x: number, y: number, rotation: number = 0) {
         super(identifier, x, y);
-        this.sprite = new Sprite(identifier + "_sprite", "arrow.png", this.x, this.y - 1, {size: 2, rotation});
+        this.sprite = new Sprite(identifier + "_sprite", "arrow.png", this.x, this.y, {size: 2, rotation});
     }
 
     draw() {
