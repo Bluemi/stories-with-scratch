@@ -15,6 +15,7 @@
     import {EventScene} from "./src/event-scene.ts";
     import {IntroScene} from "./src/intro-scene.ts";
     import {SetupScene} from "./src/setup-scene.ts";
+    import {DrawingScene} from "./src/drawing-scene.ts";
 
     const sketchHolder = document.getElementById('sketch-holder');
     if (!sketchHolder) {
@@ -29,6 +30,7 @@
               // intro / setup
               ["introScene", new IntroScene()],
               ["setupScene", new SetupScene()],
+              ["drawingScene", new DrawingScene()],
             ],
             [],
             ["edit.png", "intro.png", "setup.jpg", "back_button.png"]

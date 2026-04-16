@@ -1,7 +1,7 @@
-import {Scene, Context, Label} from 'dkwdpil';
+import {Context, Label, AutoDrawScene} from 'dkwdpil';
 import {Evt} from "../../dkwdp-interactivelib/src/event";
 
-export class EventScene extends Scene {
+export class EventScene extends AutoDrawScene {
     labels: Label[] = [];
 
     init(context: Context): void {
