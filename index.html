@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="sketch-holder"></div>
+
+  <script type="module">
+    import {StartScene} from "./src/start-scene";
+    import {NextScene} from "./src/next-scene";
+    import {EditScene, initScenes} from "dkwdpil";
+    import {EventScene} from "./src/event-scene.ts";
+
+    const sketchHolder = document.getElementById('sketch-holder');
+    if (!sketchHolder) {
+      throw new Error('Could not find sketch holder element');
+    }
+    initScenes(
+            sketchHolder,
+            [
+              ["startScene", new StartScene()],
+              ["nextScene", new NextScene()],
+              ["editScene", new EditScene()],
+              ["eventScene", new EventScene()],
+            ],
+            [],
+            ["face.png", "play.png", "edit.png"]
+    );
+  </script>
+</body>
+</html>
