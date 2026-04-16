@@ -14,7 +14,7 @@ export class StartScene extends AutoDrawScene {
     sprite02: Sprite = new Sprite("Sprite02", "setup.jpg", SPREAD, 0, {size: 17, imageMode: "center", rotation: 0.0, alpha: 1});
     hoverEffect03: HoverEffect = new HoverEffect(this.sprite02);
 
-    navButton: NavButton = new NavButton("navButton", "right", "drawingScene");
+    navButton: NavButton = new NavButton("navButton", "right", "scratchExplained");
 
     update(c: Context) {
         c.background(235);
