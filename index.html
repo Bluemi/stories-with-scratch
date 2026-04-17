@@ -18,6 +18,8 @@
     import {DrawingScene} from "./src/drawing-scene.ts";
     import {ScratchExplained} from "./src/scratch-explained.ts";
     import {PaintFigure} from "./src/paint-figure.ts";
+    import {DrawingYourselfScene} from "./src/drawing-yourself-scene.ts";
+    import {NavigationScene} from "./src/navigation-scene.ts";
 
     const sketchHolder = document.getElementById('sketch-holder');
     if (!sketchHolder) {
@@ -37,8 +39,9 @@
               ["scratchExplained", new ScratchExplained()],
 
               // drawing
-              ["drawingScene", new DrawingScene()],
-              ["paintFigure", new PaintFigure()],
+              ["drawingScene", new NavigationScene([
+                new DrawingScene(), new PaintFigure(), new DrawingYourselfScene()
+              ])],
             ],
             [],
             ["edit.png", "intro.png", "setup.jpg", "back_button.png", "costumesBackgrounds.jpg", "deleteCat.png", "arrow.png", "addFigure.png"]
